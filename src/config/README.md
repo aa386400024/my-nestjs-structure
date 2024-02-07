@@ -1,14 +1,14 @@
-# Config
+# 配置
 
 <https://trilon.io/blog/announcing-nestjs-8-whats-new#template-literal-types-and-configservice>
-> With the template literal types now available in TypeScript v4.2, we are able to implement a new infer feature that lets us infer the type of a nested custom configuration object's property, even when using dot notation
+> 随着TypeScript v4.2现在支持模板字面量类型，我们能够实现一个新的推断特性，它允许我们推断嵌套自定义配置对象属性的类型，即使是使用点符号的情况下也可以。
 
-Since the `infer` option is non-default and needs to be added each time it is used, we implement it as a default by extending ConfigService in Nest.
+由于`infer`选项不是默认的，并且每次使用时都需要添加，我们通过在Nest中扩展ConfigService来将其作为默认实现。
 
-See [ConfigService](../common/providers/config.service.ts) of `CommonModule`
+参见`CommonModule`的[ConfigService](../common/providers/config.service.ts)
 
-## Usage example
+## 使用示例
 
-See [sample](../sample/controllers/sample.controller.ts#L28-L31) method of `SampleController`
+参见`SampleController`的[sample](../sample/controllers/sample.controller.ts#L28-L31)方法
 
-![example](https://user-images.githubusercontent.com/1300172/127599201-8491e7bb-76f3-4dbc-9a62-97b6832bb882.png)
+![示例](https://user-images.githubusercontent.com/1300172/127599201-8491e7bb-76f3-4dbc-9a62-97b6832bb882.png)
