@@ -1,38 +1,45 @@
+/*
+  tsconfig.json文件定义了TypeScript编译器如何编译项目的指令和规则。
+  它包含了编译器选项和项目设置，例如编译后文件的输出目录、要包含和排除的文件等。
+  通过这些设置，可以精细控制TypeScript项目的编译过程，确保源代码按预期被转换为JavaScript代码。
+*/
+
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": ".", // 设置基本目录，用于非相对模块的解析。
     "paths": {
-      // https://docs.nestjs.com/cli/scripts#build
-      // https://nodejs.org/api/packages.html#imports
-      "#entity/*": ["./src/entity/*"],
+      // 设置路径别名，#entity/* 代表 ./src/entity/* 路径下的所有文件
+      "#entity/*": ["./src/entity/*"]
     },
-    "target": "ES2021",
-    "outDir": "dist",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "incremental": true,
-    "declaration": true,
-    "newLine": "lf",
-    "strict": true,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    // "exactOptionalPropertyTypes": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitOverride": true,
-    "noImplicitReturns": true,
-    "noPropertyAccessFromIndexSignature": true,
-    // "noUncheckedIndexedAccess": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "removeComments": true,
-    "sourceMap": true,
-    "forceConsistentCasingInFileNames": true,
-    "experimentalDecorators": true,
-    // https://github.com/Microsoft/TypeScript/issues/2577
-    "emitDecoratorMetadata": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true
+    "target": "ES2021", // 指定ECMAScript目标版本，这里是ES2021。
+    "outDir": "dist", // 指定输出目录，编译后的文件将放置在此。
+    "module": "commonjs", // 指定生成哪种模块系统代码。
+    "moduleResolution": "node", // 选择模块解析策略，node 为Node.js模块解析机制。
+    "incremental": true, // 启用增量编译。
+    "declaration": true, // 生成相应的.d.ts文件。
+    "newLine": "lf", // 设置文件末尾的换行符，lf 表示\n。
+    "strict": true, // 启用所有严格的类型检查选项。
+    "allowUnreachableCode": false, // 不允许代码中存在无法访问的代码。
+    "allowUnusedLabels": false, // 不允许代码中存在未使用的标签。
+    "noFallthroughCasesInSwitch": true, // 防止switch语句的case落空。
+    "noImplicitOverride": true, // 确保在子类中覆盖基类方法时必须使用override关键字。
+    "noImplicitReturns": true, // 在函数中每个分支都必须有返回值。
+    "noPropertyAccessFromIndexSignature": true, // 禁止从索引签名中访问属性。
+    "noUnusedLocals": true, // 报告未使用的局部变量。
+    "noUnusedParameters": true, // 报告未使用的参数。
+    "removeComments": true, // 编译时删除注释。
+    "sourceMap": true, // 生成相应的.map文件。
+    "forceConsistentCasingInFileNames": true, // 强制文件名大小写一致性。
+    "experimentalDecorators": true, // 启用实验性的装饰器支持。
+    "emitDecoratorMetadata": true, // 添加装饰器元数据支持。
+    "esModuleInterop": true, // 启用esModuleInterop。
+    "skipLibCheck": true // 跳过库文件的类型检查。
   },
-  "include": ["typings/global.d.ts", "src/**/*", "test/**/*", "bin/**/*"],
-  "exclude": ["node_modules"]
+  "include": [
+    "typings/global.d.ts",
+    "src/**/*",
+    "test/**/*",
+    "bin/**/*"
+  ], // 指定编译器需要包含在编译中的文件。
+  "exclude": ["node_modules"] // 指定编译器需要排除的文件。
 }
