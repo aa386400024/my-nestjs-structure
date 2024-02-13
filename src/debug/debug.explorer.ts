@@ -1,3 +1,7 @@
+// 该文件定义了`DebugExplorer`类，负责探索和应用调试装饰器到NestJS应用中的各个部分。
+// 它通过NestJS的`DiscoveryService`来发现应用中的控制器和提供者，并根据配置应用调试装饰器。
+// 这使得开发者可以灵活地为应用的不同部分添加调试功能，提高开发和调试的效率。
+
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Inject, Injectable, Type } from '@nestjs/common';
 import { MODULE_METADATA } from '@nestjs/common/constants';

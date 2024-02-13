@@ -1,1 +1,4 @@
-export const DEBUG_METADATA = 'debug';
+// 该文件定义了与调试功能相关的常量。这些常量可以在整个应用中被引用，
+// 用于标识和处理调试相关的元数据，从而支持开发和调试过程中的特定需求。
+
+export const DEBUG_METADATA = 'debug'; // 定义一个调试元数据的键，用于在装饰器等场合标识调试相关信息。
