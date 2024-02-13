@@ -1,6 +1,14 @@
+/**
+ * user.interface.ts 文件用途：定义用户对象的接口。
+ * 本接口规定了用户对象必须包含的属性，包括用户的 ID、姓名、电子邮件和角色列表。
+ *
+ * 通过定义这样的接口，我们可以在应用的不同部分统一用户对象的结构，
+ * 便于类型检查和后续的维护。此外，这也有助于在团队开发中明确各个模块间数据交换的格式。
+ */
+
 export interface User {
-  id: string;
-  name: string;
-  email: string;
-  roles: string[];
+  id: string; // 用户的唯一标识符
+  name: string; // 用户的姓名
+  email: string; // 用户的电子邮件地址
+  roles: string[]; // 用户所属的角色列表
 }

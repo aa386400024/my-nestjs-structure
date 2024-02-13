@@ -10,7 +10,8 @@ import { AuthService } from '../auth.service';
 
 @Injectable()
 export class LocalStrategy extends PassportStrategy(Strategy) {
-  constructor(private auth: AuthService) { // 注入AuthService以使用其validateUser方法进行用户验证
+  constructor(private auth: AuthService) {
+    // 注入AuthService以使用其validateUser方法进行用户验证
     super(); // 调用父类的构造函数，初始化策略
   }
 
